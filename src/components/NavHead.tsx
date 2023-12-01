@@ -16,9 +16,9 @@ const lato = Lato({
 
 const NavHead: React.FC = () => {
   return (
-    <div className=" bg-red-50/20 rounded-md p-4">
-      <div className="max-w-[1536px] mx-8">
-        <nav className="mx-auto flex items-center justify-between">
+    <div className="mx-auto max-w-[1536px] bg-red-50/20 rounded-md p-4">
+      <div>
+        <nav className="flex items-center justify-between">
           <Link href="/about">
             <h4 className={`${lato.className} text-[#F9FAF9] mr-6 font-bold text-xl`}>About</h4>
           </Link>
@@ -37,8 +37,7 @@ const NavHead: React.FC = () => {
 
           <button className='nav-button flex items-center justify-between bg-[#D9D9D9] ml-auto rounded-sm p-1'>
             <div className='flex flex-col items-center justify-center'>
-              <span className={`${anton.className} text-[#D43227] font-anton uppercase font-bold mb-0 mt-0`}>Download</span>
-              <span className={`${anton.className} text-[#D43227] font-anton uppercase font-bold mb-0 mt-0`}>Free</span>
+              <span className={`${anton.className} text-[#D43227] font-anton uppercase font-bold mb-0 mt-0`}>Download<br/> free</span>
             </div>
               <img className='ml-2' src="/icons/download-icon.svg" alt="download" />
           </button>
