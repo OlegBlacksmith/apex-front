@@ -57,7 +57,7 @@ const homePage = () => {
             backgroundColor: '#9F9F9F'
             }}>
             {/* Title */}
-            <div className="flex flex-col content-center justify-center">
+            <div className="flex flex-col items-center justify-center text-center">
               <div className="mt-36">
                 <h2 className={`${anton.className} text-6xl font-bold uppercase text-[#F3F3F3]`}>
                   Choose Your fighter and become an <span className="block">apex legend</span>
@@ -105,11 +105,10 @@ const homePage = () => {
               backgroundPosition: 'center',
               width: '100vw',
               height: '100vh',
-              
               backgroundRepeat: 'no-repeat',
               backgroundColor: '#F5283D'
             }}>
-            <div className="flex items-center mt-10">
+            <div className="flex items-center">
               <div className="mt-20 pr-4">
                 <img src="/elements/rect-elem-bpass1.png" alt="rect-elem-bpass" />
               </div>
@@ -143,9 +142,12 @@ const homePage = () => {
               width: '100vw',
               height: '100vh',
               backgroundRepeat: 'no-repeat',
-              backgroundColor: '#F5283D'
+              backgroundColor: '#F5283D',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
             }}>
-              <div className="ml-40">
+              <div className="ml-40 mt-36">
                 <h1 className={`${oswald.className} text-[#F3F3F3] text-7xl uppercase`}>
                   SIGN UP FOR <br /> APEX LEGENDS <br /> NEWS
                 </h1>
@@ -170,14 +172,14 @@ const homePage = () => {
           {/* Sixth block start */}
 
           <div style={{
-              backgroundImage: "url('/back-texture/octane-bg.jpg')",
+              backgroundImage: "url('/back-texture/bg-prefooter.png')",
               backgroundSize: 'cover', 
               backgroundPosition: 'center',
-              width: '100vw',
-              height: '100vh',
               backgroundRepeat: 'no-repeat',
               backgroundColor: '#F5283D'
-            }}></div>
+            }}>
+              
+            </div>
 
           {/* Sixth block end */}
         </div>
