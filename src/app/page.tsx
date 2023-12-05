@@ -1,15 +1,33 @@
 import NavHead from "@/components/NavHead"
 import WatchButton from "@/components/WatchButton";
 import LegendCards from "@/components/LegendCards";
+import FooterNavUp from "@/components/FooterNavUp";
+import FooterNavDown from "@/components/FooterNavDown";
 
-import { Anton, Oswald, Lato } from "next/font/google";
+import Link from 'next/link';
+
+import { Anton, Oswald, Lato, Antonio, Anybody } from "next/font/google";
 import BattlePassCards from "@/components/BattlePassCards";
+
+const anybody = Anybody({
+  weight: ['700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap'
+})
+
+const antonio = Antonio({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 const anton = Anton({
   weight: ['400'],
   style: ['normal'],
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap'
 })
 
 const lato = Lato({
@@ -169,19 +187,55 @@ const homePage = () => {
 
           {/* Fifth block end */}
 
-          {/* Sixth block start */}
+          {/* Prefooter block start */}
 
           <div style={{
               backgroundImage: "url('/back-texture/bg-prefooter.png')",
               backgroundSize: 'cover', 
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
-              backgroundColor: '#F5283D'
+              backgroundColor: '#F5283D',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}>
-              
+              <Link href="/about" className=" mt-16">
+                <img src="/elements/pfooter-logo-table.png" alt="pfooter-logo" />
+              </Link>
+              <h1 className={`${antonio.className} uppercase text-5xl text-[#F3F3F3] mt-7`}>
+                PLAY FOR FREE* ON ALL OF PLATFORMS!
+              </h1>
+              <h3 className={`${lato.className} text-[#F3F3F3] text-3xl leading-10 mt-7`}>
+                On PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S, Nintendo Switch, and PC via EA App and Steam
+              </h3>
+              <button className={`${anybody.className} text-lg text-center uppercase text-[#FFFFFF] bg-[#B02C2F] rounded-sm pl-4 pr-4 pt-2 pb-2 mt-7 mb-28`}>
+                Play for Free*
+              </button>
             </div>
 
-          {/* Sixth block end */}
+          {/* Prefooter block end */}
+
+          {/* Footer block start */}
+
+          <div style={{
+              backgroundImage: "url('/back-texture/bg-footer.png')",
+              backgroundSize: 'cover', 
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundColor: '#F5283D',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+            }}>
+              <FooterNavUp />
+              <hr className=" border-0 bg-white h-8" />
+              <div>
+                <FooterNavDown />
+              </div>
+            </div>
+
+          {/* Footer block end */}
         </div>
       )
 };
